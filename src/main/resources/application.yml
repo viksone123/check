@@ -1,0 +1,28 @@
+server:
+  port: 9111
+  
+spring:
+  jackson:
+    time-zone: America/Toronto
+    
+  jpa:
+    database-platform:
+      org.hibernate.dialect.MySQL5Dialect
+    hibernate.ddl-auto:
+#     validate
+      none
+    show-sql:
+      false
+             
+  datasource:
+      url: jdbc:mysql://localhost:3306/emp
+      username: root
+      password: 1524336
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      test-on-borrow: true
+      test-while-idle: true
+      validation-query: select 1 from dual
+      maximum-pool-size: 25
+      initial-size: 10
+      minimum-idle: 0
+      auto-commit: true
